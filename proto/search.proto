@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option go_package=".;proto";
+package proto;
+
+import "google/api/annotations.proto";
+
+service SearchService {
+    rpc Search(SearchRequest) returns (SearchResponse) {
+        //新增 option 以支持http请求
+        option (google.api.http) = {
+            get: "/search"
+            //支持post请求
+            additional_bindings {
+                post: "/search"
+            }
+            //支持PUT请求
+            additional_bindings {
+                put: "/search"
+            }
+            //接口别名
+            additional_bindings {
+                get: "/v2/search"
+            }
+        };
+    }
+}
+
+message SearchRequest {
+    string request = 1;
+}
+
+message SearchResponse {
+    string response = 1;
+}
