@@ -659,8 +659,8 @@ $ grpcurl -plaintext -d '{"request":"Gprc"}' localhost:9001 proto.SearchService.
 
 
 ## 参考
-- https://eddycjy.com/go-categories/  grpc 教程
-- https://zhuanlan.zhihu.com/p/359968500 grpc 教程
-- https://www.lixueduan.com/tags/  grpc 教程
+- https://eddycjy.com/go-categories/  
+- https://zhuanlan.zhihu.com/p/359968500 
+- https://www.lixueduan.com/tags/
 - https://golang2.eddycjy.com/posts/ch3/02-simple-protobuf 
 
